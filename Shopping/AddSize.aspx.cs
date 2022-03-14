@@ -28,7 +28,7 @@ namespace Shopping
 
         private void BindrptrSize()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection(; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 using (SqlCommand cmd = new SqlCommand("select A.*,B.*,C.*,D.*,E.* from Sizes A inner join Category B on B.CatID =a.CategoryID  inner join Brands C on C.BrandID =A.BrandID inner join SubCategory D on D.SubCatID =A.SubCategoryID inner join Gender E on E.GenderID =A.GenderID ", con))
                 {
@@ -47,7 +47,7 @@ namespace Shopping
 
         private void BindMainCategory()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection(; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Select * from Category", con);
@@ -68,7 +68,7 @@ namespace Shopping
 
         private void BindBrand()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection("; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Select * from Brands", con);
@@ -90,7 +90,7 @@ namespace Shopping
         private void BindGender()
         {
 
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection("; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Select * from Gender with(nolock)", con);
@@ -110,7 +110,7 @@ namespace Shopping
         }
         protected void btnAddSize_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection(; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Insert into Sizes(SizeName,BrandID,CategoryID,SubCategoryID,GenderID) Values('" + txtSize.Text + "','" + ddlBrand.SelectedItem.Value + "','" + ddlCategory.SelectedItem.Value + "','" + ddlSubCategory.SelectedItem.Value + "','" + ddlGender.SelectedItem.Value + "')", con);
@@ -140,7 +140,7 @@ namespace Shopping
         {
             int MainCategoryID = Convert.ToInt32(ddlCategory.SelectedItem.Value);
 
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection(; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Select * from SubCategory where MainCatID='" + ddlCategory.SelectedItem.Value + "'", con);
