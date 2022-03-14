@@ -19,7 +19,7 @@ namespace Shopping
 
         private void BindCategoryReapter()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection("; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 using (SqlCommand cmd = new SqlCommand("select * from Gender", con))
                 {
@@ -36,7 +36,7 @@ namespace Shopping
 
         protected void btnAddBrand_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection("; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Insert into tblGender(GenderName) Values('" + txtGender.Text + "')", con);
