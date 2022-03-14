@@ -39,7 +39,7 @@ namespace Shopping
                     {
                         string PID = CookieDataArray[i].ToString().Split('-')[0];
                         string sizeID = CookieDataArray[i].ToString().Split('-')[1];
-                        SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+                       
 
                         {
                             using (SqlCommand cmd = new SqlCommand("select A.* , getSizeName(" + sizeID + ") as SizeNamee,"
