@@ -22,7 +22,7 @@ namespace Shopping
 
         private void BindBrandRepeater()
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection("; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 using (SqlCommand cmd = new SqlCommand("select * from Brands", con))
                 {
@@ -39,7 +39,7 @@ namespace Shopping
 
         protected void btnAddBrand_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-5ARN2QG\\SQLEXPRESS01; Initial Catalog = PandaCart; Integrated Security = True");
+            SqlConnection con = new SqlConnection("Data Source = ; Initial Catalog = PandaCart; Integrated Security = True");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Insert into Brands(Name) Values('" + txtBrand.Text + "')", con);
